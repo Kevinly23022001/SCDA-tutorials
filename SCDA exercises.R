@@ -3,6 +3,9 @@
 # update.packages("<package name>") --> to update a package
 # library("<package name>") --> to load a package
 
+#Packages-------------------------------------------------------------------------------
+# https://cran.r-project.org/web/views/ --> list of packages
+
 #Read Data from csv/excel---------------------------------------------------------------
 # --> files should be in the current WD
 # read.csv("name.csv")
@@ -69,7 +72,6 @@
 # ==, >=, <=, != 
 # True/false
 
-#Packages-------------------------------------------------------------------------------
-# https://cran.r-project.org/web/views/ --> list of packages
+
 
 
