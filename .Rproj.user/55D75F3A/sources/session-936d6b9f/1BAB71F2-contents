@@ -84,14 +84,31 @@
 # variable_DF$column_name * 2                       --> every row in column_name * 2
 # variable_DF$column_name * variable_DF$column_name --> multiply columns
 
-#example code
-Cars_DF <- mtcars
-Mazda_RX4_Wag <- Cars_DF[2, ]
+# Example code
+# Cars_DF <- mtcars
+# Mazda_RX4_Wag <- Cars_DF[2, ]
 
-#Saving and reading a dataframe
+#Saving and reading a data frame
 # save(variable_DF, file = "file_name.Rda")       --> save DF to file
 # write.csv(variable_DF, file = "file_name.csv")  --> save DF to csv
 # df <- read.csv(file = "file_name.csv")          --> read csv file
+
+#Create vector variable from a Data frame
+# Object_name <- variable_DF$column_name --> create variable from a DF
+
+#Create a data frame
+#Combine vector variables of equal size
+# df <- data.frame(variable_name1, variable_name2, variable_name3)
+
+# Example
+# name <- c("Kevin", "Dung", "Cuong", "Hong")
+# age <- c(22, 23, 53, 50)
+# woonplaats <- c("Apeldoorn","Apeldoorn","Apeldoorn","Apeldoorn")
+# df <- data.frame(name, age, woonplaats)
+
+#Vector operations-----------------------------------------------------------------------
+# seq(from = x, to = y, by = n) --> create vector sequence from x to y by steps of n
+# rep(x, y)                     --> create vector sequence of value x, y times
 
 
 
