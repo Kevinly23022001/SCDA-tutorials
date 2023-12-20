@@ -1,9 +1,9 @@
 {
     "id": "1BAB71F2",
-    "path": "~/SCDA tutorials/SCDA exercises.R",
+    "path": "~/Desktop/Documents/SCDA tutorials/SCDA exercises.R",
     "project_path": "SCDA exercises.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2929260023",
     "contents": "",
     "dirty": false,
     "created": 1703071059484.0,
@@ -12,14 +12,16 @@
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "1,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1703071075,
+    "lastKnownWriteTime": 1703071514,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1703071075210,
+    "last_content_update": 1703071514758,
     "read_only": false,
     "read_only_alternatives": []
 }
