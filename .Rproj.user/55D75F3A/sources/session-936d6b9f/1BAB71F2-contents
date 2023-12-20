@@ -72,6 +72,26 @@
 # ==, >=, <=, != 
 # True/false
 
+#Data frames----------------------------------------------------------------------------
+#Load data frame
+# variable_DF <- file      --> store file in variable_DF
+# view(variable_DF)        --> view the dataframe
+# variable_DF[row, column] --> value in [row:row, column:column], empty --> whole row/column
+#                         or
+# variable_DF$column_name  --> value in [ , column_name]
+
+#Data frame calculations
+# variable_DF$column_name * 2                       --> every row in column_name * 2
+# variable_DF$column_name * variable_DF$column_name --> multiply columns
+
+#example code
+Cars_DF <- mtcars
+Mazda_RX4_Wag <- Cars_DF[2, ]
+
+#Saving and reading a dataframe
+# save(variable_DF, file = "file_name.Rda")       --> save DF to file
+# write.csv(variable_DF, file = "file_name.csv")  --> save DF to csv
+# df <- read.csv(file = "file_name.csv")          --> read csv file
 
 
 
