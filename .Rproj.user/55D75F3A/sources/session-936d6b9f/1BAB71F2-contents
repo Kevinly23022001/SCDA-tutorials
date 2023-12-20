@@ -47,31 +47,6 @@
 #Remover variable/object
 # rm(variable/object)
 
-#Using a function-----------------------------------------------------------------------
-#Function: A function is a set of statements organized together to perform a 
-#          specific task. A function usually takes in some sort of data structure, 
-#          processes it, and returns a result.
-# Function() {argument}
-#or
-# Function(argument)
-
-#Argument types
-# round(number, digits = x) --> round a number x, digits x
-# mean(numbers)             --> calculate the mean of numbers x:x
-# factorial(number)         --> number!
-# sample(x = x:x, size = n, replace = true/false) 
-#             --> returns a sample from sample size of n from range x:x, 
-#             with/without replacement (putting number back in the jar)
-# sum(numbers)              --> sum the numbers
-# sqrt(number)              --> square root of number
-
-#Normal arithmetic operators------------------------------------------------------------
-# +, -, *, /, ^
-
-#Boolean operators----------------------------------------------------------------------
-# ==, >=, <=, != 
-# True/false
-
 #Data frames----------------------------------------------------------------------------
 #Load data frame
 # variable_DF <- file      --> store file in variable_DF
@@ -83,6 +58,7 @@
 #Data frame calculations
 # variable_DF$column_name * 2                       --> every row in column_name * 2
 # variable_DF$column_name * variable_DF$column_name --> multiply columns
+# variable_DF$new_column_name                       --> creates a new column
 
 # Example code
 # Cars_DF <- mtcars
@@ -110,5 +86,83 @@
 # seq(from = x, to = y, by = n) --> create vector sequence from x to y by steps of n
 # rep(x, y)                     --> create vector sequence of value x, y times
 
+#Normal arithmetic operators------------------------------------------------------------
+# +, -, *, /, ^
 
+#Boolean operators----------------------------------------------------------------------
+# ==, >=, <=, != 
+# True/false
 
+#Using a function-----------------------------------------------------------------------
+#Function: A function is a set of statements organized together to perform a 
+#          specific task. A function usually takes in some sort of data structure, 
+#          processes it, and returns a result.
+# Function() {argument}
+#or
+# Function(argument)
+
+#Argument types
+# round(number, digits = x) --> round a number x, digits x
+# mean(numbers)             --> calculate the mean of numbers x:x
+# factorial(number)         --> number!
+# sample(x = x:x, size = n, replace = true/false) 
+#             --> returns a sample from sample size of n from range x:x, 
+#             with/without replacement (putting number back in the jar)
+# sum(numbers)              --> sum the numbers
+# sqrt(number)              --> square root of number
+
+# Example
+# square_it <- function(x) {
+#     square <- x^2
+#     return(square)
+# }
+# square_it(4)
+
+# to_Fahrenheit <- function(c) {
+#      Fahrenheit <- (c*(9/5))+32
+#      return(Fahrenheit)
+# }
+# to_Fahrenheit(25)
+
+#If-Else statements
+# Example
+# sign <- function(x) {
+#     if(x>=0){
+#       print("non-negative number")
+#     } else {
+#       print("negative number")
+#     }
+# }
+# sign(-2)
+
+#loops
+# Example --> fill in from row 3 until row 100 using loop
+
+# sales_volume <- vector(mode = "integer", length = 100)
+# sales_volume[1] <- 0
+# sales_volume[2] <- 5
+
+# for (i in 3:length(sales_volume)) {
+#     sales_volume[i] <- sales_volume[i-1] * 1.5
+# }
+
+# Example --> fill in from row 3 as long as i-1 <= 100
+
+# sales_volume <- vector(mode = "integer", length = 100)
+# sales_volume[1] <- 0
+# sales_volume[2] <- 5
+# i = 3
+# while (sales_volume[i-1] <= 100) {
+#       sales_volume[i] <- sales_volume[i-1] * 1.5
+#       i = i + 1
+# }
+
+# Example --> fill in a matrix, from column 1 to column 2, from row 1 to row 10,
+#                               j  fast running index, i --> slow running index
+
+# mat <- matrix(0, nrow = 10, ncol = 10)
+# for (i in 1:10) {
+#     for (j in 1:10) {
+#        mat[i, j] <- j - i
+#     }  
+# }
