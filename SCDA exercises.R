@@ -8,12 +8,10 @@
 # read.csv("name.csv")
 # read_excel("name.xlsx")
 
-#Creating an object---------------------------------------------------------------------
+#Creating an object/variable------------------------------------------------------------
 #Object: An object is simply a data structure.
 #        We can save data as an object and use an object to call up stored data
 # Object_name <- value/object_type
-#Or
-# Object_name = value/object_type
 
 #List all objects names already used, function
 # ls()
@@ -25,6 +23,26 @@
 # Array:      array()
 # Factor:     factor()
 # Data frame: data.frame()
+
+#Data types-----------------------------------------------------------------------------
+#Ask the data type structure
+# str(variable/object)
+# class(variable/object)
+
+#data types
+# numeric   --> pi --> 3.1459....
+# integer   --> 42
+# character --> "Apple"
+# logical   --> True/False
+
+#Change data types
+# as.numeric(variable/object)
+# as.integer(variable/object)
+# as.character(variable/object)
+# as.logical(variable/object)
+
+#Remover variable/object
+# rm(variable/object)
 
 #Using a function-----------------------------------------------------------------------
 #Function: A function is a set of statements organized together to perform a 
@@ -44,4 +62,14 @@
 # sum(numbers)              --> sum the numbers
 # sqrt(number)              --> square root of number
 
-# ---------------------------------------------------------------------------------
+#Normal arithmetic operators------------------------------------------------------------
+# +, -, *, /, ^
+
+#Boolean operators----------------------------------------------------------------------
+# ==, >=, <=, != 
+# True/false
+
+#Packages-------------------------------------------------------------------------------
+# https://cran.r-project.org/web/views/ --> list of packages
+
+
