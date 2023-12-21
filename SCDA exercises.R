@@ -205,14 +205,50 @@
 # dev.off()                                 --> end and save
 
 #Statistics-----------------------------------------------------------------------
-set.seed(1)
+#normal distribution plots 
+# set.seed(1)                               --> is used to set the seed for random number  
+#                                               generation. This is important because it 
+#                                               makes the results  of random processes 
+#                                               reproducible.
 
-y = rnorm(100, mean = 0, sd = 1)
-prob_y = pnorm(y)
-hist(prob_y)
+# y = rnorm(100000, mean = 0, sd = 1)       --> generates random numbers from a normal distribution
+# prob_y = pnorm(y)                         --> function calculates the cumulative distribution function 
+#                                               (CDF) of the normal distribution for a given set of values.
+#                                               with each element representing the cumulative probability 
+#                                               of the corresponding element in y.
+# hist(y, breaks = 100)
 
+# x <- seq(-4, 8, length = 1000)            --> vector of random numbers between -4 and 8
+# density <- dnorm(x, mean = 2, sd = 1)
+# plot(x, density, type = "l", lwd = 1)
 
+# y <- rnorm(100000, mean = 2, sd = 1)
+# hist(y, 
+#      freq = FALSE,
+#      col = "cyan",
+#      breaks = 100)
+#curve(dnorm(x, mean = 2, sd = 1),
+#      add = TRUE,
+#      col = "red")
 
+# x <- seq(-4, 8, length = 1000)
+# density_1 <- dnorm(x, mean = 0, sd = 1)
+# density_2 <- dnorm(x, mean = 2, sd = 1)
+# plot(x, density_1,
+#      type = "l",
+#      lwd = 2)
+# curve(dnorm(x, mean = 2, sd = 1), 
+#       add = TRUE,
+#       col = "red",
+#       lwd = 2)
 
+#Regression (linear model)
+# df <- mtcars
 
+# model_simple <- lm(mpg ~ wt, data = df)   --> create linear model
+# summary(model_simple)
 
+# plot(df$mpg ~ df$wt)                      --> create scatterplot
+# abline(lm(df$mpg ~ df$wt))                --> add regression line
+
+#End-----------------------------------------------------------------------
