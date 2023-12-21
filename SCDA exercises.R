@@ -166,3 +166,42 @@
 #        mat[i, j] <- j - i
 #     }  
 # }
+
+#Plotting-----------------------------------------------------------------------
+df <- airquality
+#plots
+# plot(df)          --> plot whole data frame (scatter)
+# ?plot()           --> for help
+
+# plot(df$Ozone)    --> plot 1 variable from the data frame against index (scatter)
+
+# barplot(df$Ozone) -->  plot 1 variable from the data frame against index (bars)
+
+# hist(df$Ozone)    --> plot histogram of 1 variable from the data frame
+
+# boxplot(df$Ozone) --> plot boxplot of 1 variable from the data frame
+
+# plot(df$Ozone, df$Wind,                    --> vector(x), vector(y)
+#     pch = 16,                             --> shape of data points
+#     cex = 1,                              --> size of data points
+#     col = "black",                        --> color of data points
+#     main = "Wind plotted against Ozone",  --> add graph title
+#     xlab = "Ozone", ylab = "wind")        --> add axis labels
+
+# abline(lm(df$Wind ~ df$Ozone))            --> add linear regression line to plot
+# abline(h = 10, col = "purple")            --> add line at y = 10
+
+#save plot to pdf
+# pdf(file = "histogram_wind_plot.pdf",     --> create file to .pdf
+#    width = 8, height = 6)
+
+# hist(df$Wind,                             --> create plot
+#     col = "blue",
+#     main = "Wind histogram",
+#     breaks = 10,
+#     xlab = "frequency", ylab = "Wind")
+
+# dev.off()                                 --> end and save
+
+
+
