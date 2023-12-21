@@ -168,7 +168,8 @@
 # }
 
 #Plotting-----------------------------------------------------------------------
-df <- airquality
+#df <- airquality
+
 #plots
 # plot(df)          --> plot whole data frame (scatter)
 # ?plot()           --> for help
@@ -202,6 +203,16 @@ df <- airquality
 #     xlab = "frequency", ylab = "Wind")
 
 # dev.off()                                 --> end and save
+
+#Statistics-----------------------------------------------------------------------
+set.seed(1)
+
+y = rnorm(100, mean = 0, sd = 1)
+prob_y = pnorm(y)
+hist(prob_y)
+
+
+
 
 
 
