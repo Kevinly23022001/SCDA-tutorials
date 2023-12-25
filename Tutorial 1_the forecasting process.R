@@ -1,4 +1,5 @@
-#Tutorial 1 - The forecasting process
+#Tutorial 1 - The forecasting process 
+#Exercise 1 ------------------------------------------------------------------------------------
 # The file SouvenirSales.xls contains monthly sales for a souvenir shop at a
 # beach resort town in Queensland, Australia, between 1995 and 2001. Back
 # in 2001, the store wanted to use the data to forecast sales for the next 12
@@ -8,7 +9,7 @@
 # then fit a forecasting model to sales, using the training period. Partition the
 # data into the training and validation periods as explained above.
 
-#Read file--------------------------------------------------------------------
+#Read file
 library(readxl)
 SouvenirSales <- read_excel("SouvenirSales.xlsx")
 
@@ -77,6 +78,35 @@ lines(naive_forecast$mean/1000, col="red", lty=2,type="b")
 
 #Only works well if you make the plot screen larger
 # legend(2001.3,100, c("Actual Sales","Naive Seasonal Forecast"), col=1:2, lty=1:2)
+
+#Exercise 2 ------------------------------------------------------------------------------------
+# a) Create a well-formatted time plot of the data
+
+library(readxl)
+DepartmentStoreSales <- read_excel("DepartmentStoreSales.xlsx")
+ts <- ts(DepartmentStoreSales$Sales, frequency = 4)
+plot(ts/1000, 
+     xlab = "Quarter", 
+     ylab = "Sales",
+     bty = "l", 
+     xaxt="n")
+axis(1, at=seq(2,24,2), labels=seq(2,24,2))
+
+yearly.ts <- ts(DStoreSales$Sales, start = c(1,1), end = c(6,4), freq = 4)
+plot(yearly.ts, xlab = "Time (Yearly)", ylab = "Sales", bty = "l")
+# b) Which of the four components (level, trend, seasonality, noise) seem to
+#    be present in this series? 
+#    --> upward sloping trend and yearly seasonality, every fourth quarter, noise and level
+
+#Exercise 3 ------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
