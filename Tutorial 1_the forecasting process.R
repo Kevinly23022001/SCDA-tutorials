@@ -42,9 +42,13 @@ validation.ts <- window(ts, start = c(2001, 1))
 library(fpp2)
 library(gridExtra)
 naive_forecast <- naive(training.ts, h = length(validation.ts))
-plot1 <- autoplot(naive_forecast)
-plot2 <- autoplot(ts)
-grid.arrange(plot1, plot2, nrow = 2)
+plot(naive_forecast, ylab = "sales", xlab = "years", bty = "l", xaxt = "n", yaxt = "n")
+axis(1, at = seq(1995, 2002, 1), labels = seq(1995, 2002, 1))
+axis(2, at = seq(0, 150000, 25000), labels = seq(0, 150000, 25000))
+
+plot(ts, main = "original series", ylab = "sales", xlab = "years", bty = "l", xaxt = "n", yaxt = "n")
+axis(1, at = seq(1995, 2002, 1), labels = seq(1995, 2002, 1))
+axis(2, at = seq(0, 150000, 25000), labels = seq(0, 150000, 25000))
 
 # d) The analyst found a forecasting model that gives satisfactory
 #    performance on the validation set. What must she do to use the
