@@ -251,4 +251,22 @@
 # plot(df$mpg ~ df$wt)                      --> create scatterplot
 # abline(lm(df$mpg ~ df$wt))                --> add regression line
 
+#Smoothing methods---------------------------------------------------------
+#Centered moving average
+# --> ma(time series, window size)
+
+#Trailing moving average
+# --> rollmean(time series, window size, align)
+
+#fit simple/advanced smoothing model
+# --> ets(time series, model = "XXX", 𝛼, 𝛽, 𝛾)
+# model = "Error, Trend, Seasonality"
+# X= N: none
+# X= Z: automatic 
+# X= A: additive 
+# X= M: multiplicative
+
+#Differencing -------------------------------------------------------------
+# diff(time series, lag)
+
 #End-----------------------------------------------------------------------
