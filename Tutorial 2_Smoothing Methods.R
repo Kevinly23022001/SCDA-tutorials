@@ -96,6 +96,7 @@ accuracy(c(56405,60031), c(60800, 64900)) #7.365%
 # calculations with simple exponential smoothing (α=0.2). Which of the two
 # methods do you prefer? Why? (For this exercise you do not need use R)
 
+#nog niet goed!!
 data.points <- c(108,116,118,124,96,119,98,102)
 ts <- ts(data.points, start = c(1,1), frequency = 52)
 Trailing.ma <- rollmean(ts, k =  4, fill = NA , align =  "right")
