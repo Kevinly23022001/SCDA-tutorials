@@ -99,12 +99,12 @@ accuracy(c(56405,60031), c(60800, 64900)) #7.365%
 #nog niet goed!!
 data.points <- c(108,116,118,124,96,119,98,102)
 ts <- ts(data.points, start = c(1,1), frequency = 52)
-Trailing.ma <- rollmean(ts, k =  4, fill = NA , align =  "right")
+Trailing.ma <- rollmean(ts, k =  4, fill = NA , align =  "right") #trailing moving average
 ts[(5:8)] <- Trailing.ma[4]
 accuracy(c(96,119,98,102), c(116.5,116.5,116.5,116.5)) # MAPE = 12.02%
 
-ses <- ets(ts[(1:4)], "ANN", alpha = 0.2)
+ses <- ets(ts[(1:4)], "ANN", alpha = 0.2) #simple exponential smoothing
 ses.forecast <- forecast(ses, h = 4, level = 0)         
-autoplot(ses.forecast)
-ses.mean <- ses.forecast$mean[1]
-accuracy(c(96,119,98,102), c(ses.mean,ses.mean,ses.mean,ses.mean)) #MAPE = 11.12%
+autoplot(ses.forecast$fitted)
+ses.fitted <- ses.forecast$fitted[1]
+accuracy(c(96,119,98,102), c(ses.fitted,ses.fitted,ses.fitted,ses.fitted)) #MAPE = 9.03%
